@@ -1,6 +1,7 @@
 import React from 'react';
-// import styles from './';
-const Searchbar = () => {
-  return <div>search bar</div>;
+import css from './Searchbar.module.scss';
+const Searchbar = ({ children }) => {
+  return <header className={css.searchbar}>{children}</header>;
 };
+
 export default Searchbar;
