@@ -1,23 +1,23 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
+
 import css from './searchForm.module.scss';
 class SearchForm extends Component {
   state = {
-    search: null,
+    search: '',
   };
   onSearchInput = e => {
     const value = e.currentTarget.value;
-    console.log(value);
     this.setState({ search: value });
   };
   render() {
-    const { sumbitFn } = this.props;
+    const { submitFn } = this.props;
     const { search } = this.state;
     return (
       <form
         className={css.searchForm}
         onSubmit={e => {
           e.preventDefault();
-          sumbitFn(search).then(data => console.log(data));
+          submitFn(search);
         }}
       >
         <button type="submit" className={css.searchFormButton}>
@@ -27,6 +27,7 @@ class SearchForm extends Component {
         <input
           className={css.searchFormInput}
           type="text"
+          value={this.state.search}
           autoComplete="off"
           autoFocus
           placeholder="Search images and photos"
