@@ -1,6 +1,7 @@
 import React from 'react';
 import css from './button.module.scss';
-const Button = loadMore => {
+import PropTypes from 'prop-types';
+const Button = ({ loadMore }) => {
   return (
     <button type="button" className={css.button} onClick={loadMore}>
       Load more
@@ -9,3 +10,6 @@ const Button = loadMore => {
 };
 
 export default Button;
+Button.propTypes = {
+  loadMore: PropTypes.func,
+};

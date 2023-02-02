@@ -6,7 +6,7 @@ const instanse = axios.create({
     per_page: 12,
   },
 });
-export const searchImages = async (q, _page = 1) => {
-  const { data } = await instanse.get('/', { params: { q, _page } });
+export const searchImages = async (q, page = 1) => {
+  const { data } = await instanse.get('/', { params: { q, page } });
   return data;
 };

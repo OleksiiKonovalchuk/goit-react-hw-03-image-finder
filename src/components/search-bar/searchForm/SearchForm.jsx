@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-
 import css from './searchForm.module.scss';
+import PropTypes from 'prop-types';
 class SearchForm extends Component {
   state = {
     search: '',
@@ -38,3 +38,6 @@ class SearchForm extends Component {
   }
 }
 export default SearchForm;
+SearchForm.propTypes = {
+  submitFn: PropTypes.func,
+};
