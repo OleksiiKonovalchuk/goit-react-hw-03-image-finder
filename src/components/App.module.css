@@ -1,7 +1,5 @@
 .App {
-  /* display: grid; */
-  /* grid-template-columns: 1fr; */
-  /* grid-gap: 16px; */
+  position: relative;
   padding-bottom: 24px;
   height: 100vh;
   font-size: 40px;
